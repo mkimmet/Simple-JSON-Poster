@@ -1,5 +1,5 @@
 # Simple-JSON-Poster
-This is a simple windows command line tool that posts JSON to a URL.  It is very basic and only allows you to have 2 json elements.
+This is a simple windows command line tool that posts JSON to a URL.  It is very basic and only allows you to have 2 json elements.  The code is a little ugly, but does the job.
 
 It uses the CommandLine nuget package to manage the arguments.
 
@@ -12,3 +12,4 @@ Known Issues / Bugs
 =====================
 - I think my escaping of single quotes, double quotes, slashes, and just general escaping is messed up.
 - You can only have 2 elements in your JSON.
+- Code is overall pretty ugly
