@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("JSONPoster")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("University of Notre Dame")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("JSONPoster")]
-[assembly: AssemblyCopyright("Copyright © University of Notre Dame 2015")]
+[assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
