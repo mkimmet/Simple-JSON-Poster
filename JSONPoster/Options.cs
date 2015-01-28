@@ -42,7 +42,6 @@ namespace JSONPoster
               var help = new HelpText
               {
                   Heading = new HeadingInfo("JSONPoster", "v0.1"),
-                  Copyright = new CopyrightInfo("University of Notre Dame - Mark Kimmet", 2015),
                   AdditionalNewLineAfterOption = false,
                   AddDashesToOption = true
               };
