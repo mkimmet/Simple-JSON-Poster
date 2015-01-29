@@ -10,7 +10,7 @@ namespace JSONPoster
     public class JSONWebResponse
     {
         public string Content { get; set; }
-        public string  StatusCode { get; set; }
+        public HttpStatusCode StatusCode { get; set; }
         public Exception ErrorDetails { get; set; }
     }
 }
