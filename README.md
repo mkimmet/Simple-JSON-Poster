@@ -9,7 +9,7 @@ For example if you want to post into Slack:
 
 JSONPoster.exe -u "https://hooks.slack.com/services/ASDFASDF/ASDFASDF/ASDFASDF" -n "username" -c "The Robot" -a "text" -b "I am a robot, here's a link to google <http://google.com>."
 
-Example of Posting with an ElementArray (where x is the name array and y is the value array, making sure both are equal size and correctly ordered:
+Example of Posting with an piped (|) delimited ElementArray (where x is the name array and y is the value array, making sure both are equal size and correctly ordered):
 
 JSONPoster.exe -u "https://mysiteexample100.com/myAPI" -t ElementArray -x "FirstName|LastName|Age" -y "Henry|Jones|60"
 
