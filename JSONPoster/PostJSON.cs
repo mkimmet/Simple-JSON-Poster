@@ -9,12 +9,12 @@ using System.IO;
 
 namespace JSONPoster
 {
-    public sealed class PostJSON
+    public class PostJSON
     {
         /// <summary>This function converts a dictionary to JSON (Needs tweaking depending on what JSON you are expecting)</summary>
         /// <param name="dictionary"> Dictionary to Encode in JSON</param>
         /// <returns>JSON encoded Dictionary</returns>
-        private static string DictionaryToJSON(Dictionary<String, String> dictionary)
+        protected static string DictionaryToJSON(Dictionary<String, String> dictionary)
         {
             List<string> data = new List<string>();
             int result;
@@ -42,7 +42,7 @@ namespace JSONPoster
         /// <param name="dictionary"> Dictionary to escape</param>
         /// <returns>Escaped Dictionary</returns>
 
-        private static Dictionary<string, string> CleanDictionary(Dictionary<string, string> dictionary)
+        protected static Dictionary<string, string> CleanDictionary(Dictionary<string, string> dictionary)
         {
             Dictionary<string, string> cleandictionary = new Dictionary<string, string>();
 
@@ -59,7 +59,7 @@ namespace JSONPoster
         /// <param name="dictionay">Dictionary<string,string> of key value to send to url</param>
         /// <param name="sendAsJSON">If set to true sends as JSON, otherwise sends as posted form fields</param>
         /// <returns>A JSONWebResponse object</returns>
-        public static JSONWebResponse ToUrl(string url, Dictionary<string, string> dictionay)
+        public static JSONWebResponse DictionaryToUrl(string url, Dictionary<string, string> dictionay)
         {
             try
             {
@@ -85,10 +85,10 @@ namespace JSONPoster
                 using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
                 {
                     StreamReader reader = new StreamReader(response.GetResponseStream());
-
+                    
                     JSONWebResponse webresponse = new JSONWebResponse()
                     {
-                        StatusCode = response.StatusCode.ToString(),
+                        StatusCode = response.StatusCode,
                         Content = reader.ReadToEnd(),
                         ErrorDetails = null
                     };
@@ -100,7 +100,7 @@ namespace JSONPoster
             {
                 JSONWebResponse response = new JSONWebResponse()
                 {
-                    StatusCode = HttpStatusCode.InternalServerError.ToString(),
+                    StatusCode = HttpStatusCode.InternalServerError,
                     Content = "Error Retrieving Data",
                     ErrorDetails = ex
                 };
