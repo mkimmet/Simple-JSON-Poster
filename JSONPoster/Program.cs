@@ -34,9 +34,9 @@ namespace JSONPoster
                     Console.WriteLine("Sending...");
 
                     //Post the JSON data to the URL
-                    string response = PostToURL.HttpPost(options.url, JSONData, true);
+                    JSONWebResponse response = PostJSON.ToUrl(options.url, JSONData);
 
-                    if (response == "200")
+                    if (response.StatusCode == "200")
                     {
                         Console.WriteLine("Success!");
                     }
@@ -47,7 +47,7 @@ namespace JSONPoster
                 }
                 else
                 {
-                    string response = PostToURL.HttpPost(options.url, JSONData, true);
+                    JSONWebResponse response = PostJSON.ToUrl(options.url, JSONData);
                 }
                     
             }
