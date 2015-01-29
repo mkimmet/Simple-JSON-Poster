@@ -9,7 +9,7 @@ using CommandLine.Text;
 namespace JSONPoster
 {
     //This is a class for the CommandLine Parser Package to use to take commands from the command line
-    class Options
+    public class Options
     {
           [Option('u', "URL", Required = true, HelpText = "URL to post your content to")]
           public string url { get; set; }
