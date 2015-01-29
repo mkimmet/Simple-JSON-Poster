@@ -11,6 +11,11 @@ namespace JSONPoster
 {
     public sealed class CommandLinePostJSON : PostJSON
     {
+        /// <summary>
+        /// This function takes a parser and options from the CommandLion Parser Nuget and the
+        /// args sent by the user and tries to post the inputs as JSON to a website using
+        /// the PostJSON class
+        /// </summary>
         public static void PostOptions(Parser parser, Options options, string[] args)
         {
             //Try to parse the args into the options variable

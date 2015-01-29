@@ -17,6 +17,8 @@ namespace JSONPoster
             //Create new options for the command line args processor from the Options Class
             Options options = new Options();
             CommandLine.Parser parser = new Parser();
+            
+            //Try to convert the args to JSON and post it
             CommandLinePostJSON.PostOptions(parser, options, args);
 
         }
