@@ -15,5 +15,5 @@ Example of Posting with an piped (|) delimited ElementArray (where x is the name
 
 Known Issues / Bugs
 =====================
-- The escaping of single quotes, double quotes, slashes, and just general escaping might not be working.
+- The escaping of double quotes and backslashes should work now, however, single quotes in messages might cause issues.
 - Code is a little ugly
