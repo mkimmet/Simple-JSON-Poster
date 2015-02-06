@@ -37,7 +37,7 @@ namespace JSONPoster
         }
 
         /// <summary>
-        ///  This function escapes characters not suitable for JSON, although it's not working right at this point.
+        ///  This function escapes double quotes and backslashes. It might need some optimization.
         /// </summary>
         /// <param name="dictionary"> Dictionary to escape</param>
         /// <returns>Escaped Dictionary</returns>
@@ -48,7 +48,7 @@ namespace JSONPoster
 
             foreach (KeyValuePair<string, string> item in dictionary)
             {
-                cleandictionary.Add(item.Key.Replace(@"""", @"\""").Replace(@"\", @"\\"), item.Value.Replace(@"""", @"\""").Replace(@"\", @"\\"));
+                cleandictionary.Add(item.Key.Replace(@"\", @"\\").Replace(@"""", @"\"""), item.Value.Replace(@"\", @"\\").Replace(@"""", @"\"""));
             }
             return cleandictionary;
         }
